@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import CardLogo from "/public/card-logo.svg";
+// import BgMain from "public/bg-main-mobile.png";
 
 function BankCards() {
   return (
@@ -27,7 +28,7 @@ function BankCards() {
 const CardsDiv = styled.div`
   width: 100%;
   height: 240px;
-  background-image: url("public/bg-main-mobile.png");
+  background-image: url(/public/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: 100% 240px;
   display: flex;
