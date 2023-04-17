@@ -22,6 +22,10 @@ const Body = styled.div`
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 343px;
+  }
 `;
 
 export default App;

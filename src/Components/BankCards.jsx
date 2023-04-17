@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import CardLogo from "/public/card-logo.svg";
-// import BgMain from "public/bg-main-mobile.png";
 
 function BankCards() {
   return (
@@ -25,7 +24,7 @@ function BankCards() {
   );
 }
 
-const CardsDiv = styled.div`
+const CardsDiv = styled.header`
   width: 100%;
   height: 240px;
   background-image: url(/public/bg-main-mobile.png);
@@ -34,12 +33,27 @@ const CardsDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 91px;
+  @media (min-width: 1024px) {
+    width: 100%;
+    max-width: 483px;
+    height: 100vh;
+    background-image: url(/public/bg-main-desktop.png);
+    background-size: 483px 100%;
+    margin-bottom: 0px;
+  }
 `;
 
 const Imagediv = styled.div`
   width: 375px;
   height: 251px;
   position: relative;
+  @media (min-width: 1024px) {
+    width: 100%;
+    max-width: 541px;
+    height: 527px;
+    box-shadow: 0px 39px 60px rgba(0, 0, 0, 0.142481);
+  }
 `;
 
 const BackImage = styled.div`
@@ -52,6 +66,14 @@ const BackImage = styled.div`
   background-image: url(/public/bg-card-back.png);
   background-repeat: no-repeat;
   background-size: 286px 157px;
+  box-shadow: 0px 39px 60px rgba(0, 0, 0, 0.142481);
+  @media (min-width: 1024px) {
+    width: 447px;
+    height: 245px;
+    top: 275px;
+    left: 258px;
+    background-size: 447px 245px;
+  }
 
   p {
     position: absolute;
@@ -63,6 +85,15 @@ const BackImage = styled.div`
     top: 73.64px;
     right: 37px;
     color: #ffffff;
+    @media (min-width: 1024px) {
+      top: 110px;
+      right: 55px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 2px;
+      text-align: right;
+    }
   }
 `;
 
@@ -80,16 +111,33 @@ const FronttImage = styled.div`
   display: flex;
   flex-direction: column;
   gap: 37px;
+  box-shadow: 0px 39px 60px rgba(0, 0, 0, 0.142481);
+  @media (min-width: 1024px) {
+    width: 447px;
+    height: 245px;
+    top: -5px;
+    left: 180px;
+    background-size: 447px 245px;
+    padding: 32px;
+    gap: 64px;
+  }
 
   img {
     width: 54px;
     height: 30px;
+    @media (min-width: 1024px) {
+      width: 84px;
+      height: 47px;
+    }
   }
 
   div {
     display: flex;
     flex-direction: column;
     gap: 17px;
+    @media (min-width: 1024px) {
+      gap: 25.5px;
+    }
 
     div {
       display: flex;
@@ -103,6 +151,13 @@ const FronttImage = styled.div`
         letter-spacing: 1.2857142686843872px;
         text-align: left;
         color: #ffffff;
+        @media (min-width: 1024px) {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 2px;
+          text-align: left;
+        }
       }
     }
   }
@@ -114,6 +169,13 @@ const FronttImage = styled.div`
     letter-spacing: 2.200000047683716px;
     text-align: left;
     color: #ffffff;
+    @media (min-width: 1024px) {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 3.422222137451172px;
+      text-align: left;
+    }
   }
 `;
 
