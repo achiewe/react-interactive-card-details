@@ -1,7 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 import CardLogo from "/public/card-logo.svg";
-
+import FrontBackground from "/public/bg-card-front.png";
+import BackBackground from "/public/bg-card-back.png";
+import MobileCardsBackground from "/public/bg-main-mobile.png";
+import DesktopCardsBackground from "/public/bg-main-desktop.png";
 function BankCards() {
   return (
     <CardsDiv>
@@ -27,7 +30,7 @@ function BankCards() {
 const CardsDiv = styled.header`
   width: 100%;
   height: 240px;
-  background-image: url("/public/bg-main-mobile.png");
+  background-image: url(${MobileCardsBackground});
   background-repeat: no-repeat;
   background-size: 100% 240px;
   display: flex;
@@ -38,7 +41,7 @@ const CardsDiv = styled.header`
     width: 100%;
     max-width: 483px;
     height: 100vh;
-    background-image: url("/public/bg-main-desktop.png");
+    background-image: url(${DesktopCardsBackground});
     background-size: 483px 100%;
     margin-bottom: 0px;
   }
@@ -63,7 +66,7 @@ const BackImage = styled.div`
   width: 286px;
   height: 157px;
   border-radius: 6px;
-  background-image: url("/public/bg-card-back.png");
+  background-image: url(${BackBackground});
   background-repeat: no-repeat;
   background-size: 286px 157px;
   box-shadow: 0px 39px 60px rgba(0, 0, 0, 0.142481);
@@ -104,7 +107,7 @@ const FronttImage = styled.div`
   width: 285px;
   height: 156.21px;
   border-radius: 6px;
-  background-image: url("/public/bg-card-front.png");
+  background-image: url(${FrontBackground});
   background-repeat: no-repeat;
   background-size: 285px 156.21px;
   padding: 19px;
